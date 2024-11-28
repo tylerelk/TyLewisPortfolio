@@ -1,12 +1,19 @@
 import reactLogo from "./assets/react.svg";
+import booBoo from "./assets/images/booboo.jpeg";
 import "./App.css";
 
 function App() {
   return (
     <>
       <div>
-        <a href='https://react.dev' target='_blank'>
-          <img src={reactLogo} className='logo react' alt='React logo' />
+        <a href='https://github.com/tylerelk' target='_blank'>
+          <img
+            src={booBoo}
+            style={{
+              width: "20%",
+              borderRadius: "20px",
+            }}
+          />
         </a>
       </div>
       <h1>Ty Lewis</h1>
