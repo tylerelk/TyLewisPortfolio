@@ -1,4 +1,3 @@
-import reactLogo from "./assets/react.svg";
 import booBoo from "./assets/images/booboo.jpeg";
 import "./App.css";
 
