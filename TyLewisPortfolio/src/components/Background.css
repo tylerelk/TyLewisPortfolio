@@ -4,6 +4,11 @@
   }
 }
 
+body {
+  overflow: hidden;
+  margin: 0;
+}
+
 .background {
   position: fixed;
   width: 100vw;
@@ -11,8 +16,7 @@
   top: 0;
   left: 0;
   background: #000000;
-  overflow: hidden;
-  z-index: -9999;
+  z-index: -1;
 }
 
 .background span {
