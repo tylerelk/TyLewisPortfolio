@@ -19,7 +19,7 @@ const Card: React.FC<CardProps> = ({ children, title }) => {
             {title}
           </p>
         </div>
-        <div className='card-content flex text-black'>{children}</div>
+        <div className='card-content flex flex-col text-black'>{children}</div>
       </div>
     </>
   );

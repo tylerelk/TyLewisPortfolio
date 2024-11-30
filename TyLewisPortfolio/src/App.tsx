@@ -15,7 +15,22 @@ function App() {
       >
         <Navbar />
         <Card title='Ty Lewis'>
-          <p>This is where I'll place "About Me" content</p>
+          <h1>Hi! &#128075;</h1>
+          <p>
+            I'm still working on this website. Check back soon for more
+            information about me and the things I'm working on. Here's a list of
+            other places to find me:
+          </p>
+          <ul>
+            <li>
+              <a href='https://www.linkedin.com/in/ty-lewis/'>
+                My LinkedIn Profile
+              </a>
+            </li>
+            <li>
+              <a href='https://github.com/tylerelk'>My GitHub</a>
+            </li>
+          </ul>
         </Card>
       </div>
     </>
