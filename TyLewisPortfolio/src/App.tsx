@@ -1,6 +1,7 @@
 import "./App.css";
 import Background from "./components/Background";
 import Card from "./components/Card";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
@@ -10,25 +11,11 @@ function App() {
         style={{
           width: "80vw",
         }}
-        className='h-screen overflow-y-scroll m-auto no-scrollbar my-8'
+        className='h-screen overflow-y-scroll m-auto no-scrollbar my-8 p-8'
       >
-        <Card title='Test Title'>
-          <p>Test Content</p>
-        </Card>
-        <Card title='Test Title'>
-          <p>Test Content</p>
-        </Card>
-        <Card title='Test Title'>
-          <p>Test Content</p>
-        </Card>
-        <Card title='Test Title'>
-          <p>Test Content</p>
-        </Card>
-        <Card title='Test Title'>
-          <p>Test Content</p>
-        </Card>
-        <Card title='Test Title'>
-          <p>Test Content</p>
+        <Navbar />
+        <Card title='Ty Lewis'>
+          <p>This is where I'll place "About Me" content</p>
         </Card>
       </div>
     </>
