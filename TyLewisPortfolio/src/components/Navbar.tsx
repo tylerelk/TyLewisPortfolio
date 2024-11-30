@@ -4,7 +4,7 @@ import TechIcon from "../assets/icons/technology.svg";
 import ProjectsIcon from "../assets/icons/projects.svg";
 import ResumeIcon from "../assets/icons/resume.svg";
 import ContactIcon from "../assets/icons/contact.svg";
-import { isMobile, isTablet, isDesktop } from "react-device-detect";
+import { isDesktop } from "react-device-detect";
 
 const navItems = [
   {

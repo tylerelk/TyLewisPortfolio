@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { isDesktop } from "react-device-detect";
 
 interface CardProps {
   children: ReactNode;
@@ -8,7 +9,11 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ children, title }) => {
   return (
     <>
-      <div className='card bg-gray-50 w-1/2 rounded-2xl m-auto my-10 shadow-2xl'>
+      <div
+        className={`card bg-gray-50 rounded-2xl m-auto my-10 shadow-2xl ${
+          isDesktop ? "w-1/2" : "w-full"
+        }`}
+      >
         <div className='card-title mb-3'>
           <p className='text-5xl  text-black font-thin border-b-2 text-left'>
             {title}
