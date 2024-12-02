@@ -6,7 +6,7 @@ interface SliderProps {
 }
 
 const HorizontalSlider = forwardRef<HTMLDivElement, SliderProps>(
-  ({ children, sliderRef }, ref) => {
+  ({ children, sliderRef }) => {
     return (
       <>
         <div
