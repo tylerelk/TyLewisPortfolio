@@ -2,37 +2,34 @@ import "./App.css";
 import Background from "./components/Background";
 import Card from "./components/Card";
 import Navbar from "./components/Navbar";
+import HorizontalSlider from "./components/HorizontalSlider";
+import { useRef } from "react";
 
 function App() {
+  const sliderRef = useRef<HTMLDivElement | null>(null);
   return (
     <>
       <Background />
-      <div
-        style={{
-          width: "80vw",
-        }}
-        className='h-screen overflow-y-scroll m-auto no-scrollbar my-8 p-8'
-      >
-        <Navbar />
-        <Card title='Ty Lewis'>
-          <h1>Hi! &#128075;</h1>
-          <p>
-            I'm still working on this website. Check back soon for more
-            information about me and the things I'm working on. Here's a list of
-            other places to find me:
-          </p>
-          <ul>
-            <li>
-              <a href='https://www.linkedin.com/in/ty-lewis/'>
-                My LinkedIn Profile
-              </a>
-            </li>
-            <li>
-              <a href='https://github.com/tylerelk'>My GitHub</a>
-            </li>
-          </ul>
+      <Navbar sliderRef={sliderRef} />
+      <HorizontalSlider sliderRef={sliderRef}>
+        <Card title='About Me' id='about'>
+          <p>This section will contain the "About Me" section</p>
         </Card>
-      </div>
+        <Card title='Technology' id='tech'>
+          <p>
+            This section will contain info about the tech I like to work with
+          </p>
+        </Card>
+        <Card title='Projects' id='projects'>
+          <p>This section will contain highlights of projects I've built</p>
+        </Card>
+        <Card title='Resume' id='resume'>
+          <p>This section will contain my resume</p>
+        </Card>
+        <Card title='Contact' id='contact'>
+          <p>This section will contain contact information</p>
+        </Card>
+      </HorizontalSlider>
     </>
   );
 }

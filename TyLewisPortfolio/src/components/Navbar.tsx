@@ -8,33 +8,37 @@ import { isDesktop } from "react-device-detect";
 
 const navItems = [
   {
-    path: "/",
+    path: "about",
     name: "About",
     icon: AboutIcon,
   },
   {
-    path: "/technology",
+    path: "tech",
     name: "Technology",
     icon: TechIcon,
   },
   {
-    path: "/projects",
+    path: "projects",
     name: "Projects",
     icon: ProjectsIcon,
   },
   {
-    path: "/resume",
+    path: "resume",
     name: "Resume",
     icon: ResumeIcon,
   },
   {
-    path: "/contact",
+    path: "contact",
     name: "Contact",
     icon: ContactIcon,
   },
 ];
 
-export default function Navbar() {
+export default function Navbar({
+  sliderRef,
+}: {
+  sliderRef: React.RefObject<HTMLDivElement>;
+}) {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(0);
   const [ballPosition, setBallPosition] = useState<number>(0);
   const iconRefs = useRef<(HTMLLIElement | null)[]>([]);
@@ -52,10 +56,24 @@ export default function Navbar() {
     }
   };
 
+  const handleIconClick = (e: React.MouseEvent, index: number) => {
+    e.preventDefault();
+    const target = sliderRef.current;
+    if (target) {
+      const sectionWidth = target.scrollWidth / navItems.length;
+      target.scrollTo({
+        left: sectionWidth * index,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <div
-      className={`mx-auto my-2 p-1 bg-gray-300 bg-opacity-30 border-transparent border-2 transition duration-200 rounded-full hover:border-gray-200 ${
-        isDesktop ? "w-1/3" : "w-full absolute bottom-0 left-0"
+      className={`mx-auto mt-4 p-1 bg-gray-600 border-transparent border-2 transition duration-200 rounded-full ${
+        isDesktop
+          ? "w-1/3 bg-opacity-30 hover:border-gray-200"
+          : "w-full absolute bottom-0 left-0"
       }`}
     >
       <ul
@@ -71,7 +89,8 @@ export default function Navbar() {
               ref={(el) => (iconRefs.current[index] = el)}
             >
               <a
-                href='#'
+                href={item.path}
+                onClick={(e) => handleIconClick(e, index)}
                 className='flex items-center justify-center w-full h-full'
               >
                 <img
@@ -89,8 +108,7 @@ export default function Navbar() {
         })}
         <span
           id='navbar-ball'
-          /* className='rounded-full w-10 h-10 bg-white bg-opacity-50 absolute translate-x-0 -z-10' */
-          className={`rounded-full w-10 h-10 bg-white absolute translate-x-0 -z-10 ${
+          className={`rounded-full w-10 h-10 bg-white absolute translate-x-0 -z-10 left-auto ${
             isDesktop ? "bg-opacity-50" : "bg-opacity-0"
           }`}
           style={{
