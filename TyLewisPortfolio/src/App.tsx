@@ -4,6 +4,7 @@ import Card from "./components/Card";
 import Navbar from "./components/Navbar";
 import HorizontalSlider from "./components/HorizontalSlider";
 import { useRef } from "react";
+import TechSection from "./components/TechSection";
 
 function App() {
   const sliderRef = useRef<HTMLDivElement | null>(null);
@@ -16,9 +17,7 @@ function App() {
           <p>This section will contain the "About Me" section</p>
         </Card>
         <Card title='Technology' id='tech'>
-          <p>
-            This section will contain info about the tech I like to work with
-          </p>
+          <TechSection />
         </Card>
         <Card title='Projects' id='projects'>
           <p>This section will contain highlights of projects I've built</p>
