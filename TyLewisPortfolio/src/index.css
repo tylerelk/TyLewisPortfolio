@@ -7,7 +7,7 @@
     display: none;
   }
   .no-scrollbar {
-    -ms-overflow-style: none;
+    -ms-overflow-style: ;
     scrollbar-width: none;
   }
 }
@@ -41,6 +41,7 @@ body {
   padding: 0;
   min-width: 320px;
   min-height: 100vh;
+  overflow-y: scroll;
 }
 
 h1 {

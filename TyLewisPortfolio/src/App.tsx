@@ -2,7 +2,6 @@ import "./App.css";
 import Background from "./components/Background";
 import Card from "./components/Card";
 import Navbar from "./components/Navbar";
-import HorizontalSlider from "./components/HorizontalSlider";
 import { useRef } from "react";
 import TechSection from "./components/TechSection";
 import Resume from "./components/Resume";
@@ -17,7 +16,7 @@ function App() {
     <>
       <Background />
       <Navbar sliderRef={sliderRef} />
-      <HorizontalSlider sliderRef={sliderRef}>
+      <div className='flex flex-col items-center gap-4'>
         <Card title='Ty Lewis' id='about'>
           <div>
             <img
@@ -47,7 +46,7 @@ function App() {
         <Card title='Contact' id='contact'>
           <p>This section will contain contact information</p>
         </Card>
-      </HorizontalSlider>
+      </div>
     </>
   );
 }

@@ -58,11 +58,10 @@ export default function Navbar({
 
   const handleIconClick = (e: React.MouseEvent, index: number) => {
     e.preventDefault();
-    const target = sliderRef.current;
-    if (target) {
-      const sectionWidth = target.scrollWidth / navItems.length;
-      target.scrollTo({
-        left: sectionWidth * index,
+    const section = document.getElementById(navItems[index].path);
+    if (section) {
+      window.scrollTo({
+        top: section.offsetTop - 10,
         behavior: "smooth",
       });
     }
@@ -70,7 +69,7 @@ export default function Navbar({
 
   return (
     <div
-      className={`mx-auto mt-4 p-1 bg-gray-600 border-transparent border-2 transition duration-200 rounded-full ${
+      className={`mx-auto my-4 p-1 bg-gray-600 border-transparent border-2 transition duration-200 rounded-full ${
         isDesktop
           ? "w-1/3 bg-opacity-30 hover:border-gray-200"
           : "w-full absolute bottom-0 left-0"
