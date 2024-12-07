@@ -2,7 +2,6 @@ import "./App.css";
 import Background from "./components/Background";
 import Card from "./components/Card";
 import Navbar from "./components/Navbar";
-import { useRef } from "react";
 import TechSection from "./components/TechSection";
 import Resume from "./components/Resume";
 import { isDesktop } from "react-device-detect";
@@ -11,13 +10,12 @@ import _booBoo from "./assets/images/booboo.jpeg";
 import Hero from "./components/Hero";
 
 function App() {
-  const sliderRef = useRef<HTMLDivElement | null>(null);
   const aboutMeParagraphs = _aboutMe.paragraphs;
   return (
     <>
       <Background />
       <Hero />
-      <Navbar sliderRef={sliderRef} />
+      <Navbar />
       <div className='flex flex-col items-center gap-4'>
         <Card title='Ty Lewis' id='about'>
           <div>

@@ -34,11 +34,7 @@ const navItems = [
   },
 ];
 
-export default function Navbar({
-  sliderRef,
-}: {
-  sliderRef: React.RefObject<HTMLDivElement>;
-}) {
+export default function Navbar() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(0);
   const [ballPosition, setBallPosition] = useState<number>(0);
   const iconRefs = useRef<(HTMLLIElement | null)[]>([]);
