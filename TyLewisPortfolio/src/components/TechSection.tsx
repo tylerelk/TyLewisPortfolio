@@ -1,4 +1,3 @@
-import { isMobile } from "react-device-detect";
 import "./TechSection.css";
 
 export default function TechSection() {
