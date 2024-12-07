@@ -1,4 +1,5 @@
 import "./TechSection.css";
+import Skills from "./Skills";
 
 export default function TechSection() {
   const icons = Object.values(
@@ -9,9 +10,9 @@ export default function TechSection() {
   );
   return (
     <>
-      <p className='text-xl'>
-        These are some of the tools I've enjoyed working with:
-      </p>
+      <p className='text-xl text-left'>Here's what I'm good at</p>
+      <Skills />
+      <p className='text-xl text-left'>Here's what I've worked with</p>
       <div className={`m-auto flex flex-wrap justify-center gap-2 w-9/12`}>
         {icons.map((icon: any, index) => {
           return (
