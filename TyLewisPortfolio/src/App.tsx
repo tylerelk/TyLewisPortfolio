@@ -6,16 +6,34 @@ import HorizontalSlider from "./components/HorizontalSlider";
 import { useRef } from "react";
 import TechSection from "./components/TechSection";
 import Resume from "./components/Resume";
+import { isDesktop } from "react-device-detect";
+import _aboutMe from "./assets/copy/aboutme.json";
+import _booBoo from "./assets/images/booboo.jpeg";
 
 function App() {
   const sliderRef = useRef<HTMLDivElement | null>(null);
+  const paragraphs = _aboutMe.paragraphs;
   return (
     <>
       <Background />
       <Navbar sliderRef={sliderRef} />
       <HorizontalSlider sliderRef={sliderRef}>
-        <Card title='About Me' id='about'>
-          <p>This section will contain the "About Me" section</p>
+        <Card title='Ty Lewis' id='about'>
+          <div>
+            <img
+              src={_booBoo}
+              className={` ${
+                isDesktop ? "w-52" : "w-24"
+              } float-right mx-4 bg-inherit rounded-3xl transition duration-300 shadow-lg hover:shadow-2xl`}
+            />
+            {paragraphs.map((p) => {
+              return (
+                <p className='text-left indent-4 text-xl leading-tight my-4'>
+                  {p}
+                </p>
+              );
+            })}
+          </div>
         </Card>
         <Card title='Technology' id='tech'>
           <TechSection />
