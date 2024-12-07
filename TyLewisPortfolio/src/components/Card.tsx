@@ -11,7 +11,7 @@ const Card: React.FC<CardProps> = ({ children, title, id }) => {
   return (
     <>
       <div
-        className={`card relative min-h-96 bg-gray-50 rounded-2xl pb-36 m-auto my-10 shadow-2xl p-4 ${
+        className={`card relative min-h-96 bg-card-background rounded-2xl pb-36 m-auto my-10 shadow-2xl p-4 ${
           isDesktop ? "w-1/2" : "w-11/12"
         }`}
         id={id}

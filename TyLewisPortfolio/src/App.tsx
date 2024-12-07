@@ -12,7 +12,7 @@ import _booBoo from "./assets/images/booboo.jpeg";
 
 function App() {
   const sliderRef = useRef<HTMLDivElement | null>(null);
-  const paragraphs = _aboutMe.paragraphs;
+  const aboutMeParagraphs = _aboutMe.paragraphs;
   return (
     <>
       <Background />
@@ -26,7 +26,7 @@ function App() {
                 isDesktop ? "w-52" : "w-24"
               } float-right mx-4 bg-inherit rounded-3xl transition duration-300 shadow-lg hover:shadow-2xl`}
             />
-            {paragraphs.map((p) => {
+            {aboutMeParagraphs.map((p) => {
               return (
                 <p className='text-left indent-4 text-xl leading-tight my-4'>
                   {p}
