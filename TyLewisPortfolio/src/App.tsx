@@ -8,6 +8,7 @@ import Resume from "./components/Resume";
 import { isDesktop } from "react-device-detect";
 import _aboutMe from "./assets/copy/aboutme.json";
 import _booBoo from "./assets/images/booboo.jpeg";
+import Hero from "./components/Hero";
 
 function App() {
   const sliderRef = useRef<HTMLDivElement | null>(null);
@@ -15,6 +16,7 @@ function App() {
   return (
     <>
       <Background />
+      <Hero />
       <Navbar sliderRef={sliderRef} />
       <div className='flex flex-col items-center gap-4'>
         <Card title='Ty Lewis' id='about'>

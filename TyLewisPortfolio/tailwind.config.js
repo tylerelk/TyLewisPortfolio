@@ -5,6 +5,7 @@ export default {
     extend: {
       backgroundImage: {
         "card-background": 'url("./assets/images/card-background.svg")',
+        "hero-background": 'url("./assets/images/hero-background.svg")',
       },
     },
   },
