@@ -51,7 +51,7 @@ export default function Navbar() {
 
   return (
     <div
-      className={`sticky top-2 ml-2 p-1 scale-50 bg-gray-600 border-transparent border-2 transition duration-200 rounded-full max-w-min bg-opacity-10 hover:border-slate-200 hover:bg-opacity-60 hover:scale-100 z-10 `}
+      className={`sticky top-2 mx-auto p-1 scale-50 bg-gray-600 border-transparent border-2 transition duration-200 rounded-full max-w-min bg-opacity-10 hover:border-slate-200 hover:bg-opacity-60 hover:scale-100 z-10 `}
     >
       <ul
         id='navbar-sections'

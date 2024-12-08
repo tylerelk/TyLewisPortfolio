@@ -22,7 +22,7 @@ const Skills = () => {
         return (
           <div
             key={s.id}
-            className='w-1/3 h-auto flex justify-between items-center p-4 rounded-lg'
+            className='min-w-fit gap-2 h-auto flex justify-between items-center p-4 rounded-lg bg-white border-2 border-slate-100'
           >
             <p className='text-sm'>{s.name}</p>
             {skillLevel(s.level)}
