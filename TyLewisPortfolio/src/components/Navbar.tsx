@@ -34,11 +34,7 @@ const navItems = [
   },
 ];
 
-export default function Navbar({
-  sliderRef,
-}: {
-  sliderRef: React.RefObject<HTMLDivElement>;
-}) {
+export default function Navbar() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(0);
   const [ballPosition, setBallPosition] = useState<number>(0);
   const iconRefs = useRef<(HTMLLIElement | null)[]>([]);
@@ -69,11 +65,7 @@ export default function Navbar({
 
   return (
     <div
-      className={`mx-auto my-4 p-1 bg-gray-600 border-transparent border-2 transition duration-200 rounded-full ${
-        isDesktop
-          ? "w-1/3 bg-opacity-30 hover:border-gray-200"
-          : "w-full absolute bottom-0 left-0"
-      }`}
+      className={`mx-auto my-4 p-1 bg-gray-600 border-transparent border-2 transition duration-200 rounded-full w-1/3 bg-opacity-30 hover:border-slate-200`}
     >
       <ul
         id='navbar-sections'
