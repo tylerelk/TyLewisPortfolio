@@ -1,10 +1,11 @@
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import AboutIcon from "../assets/icons/about.svg";
 import TechIcon from "../assets/icons/technology.svg";
 import ProjectsIcon from "../assets/icons/projects.svg";
 import ResumeIcon from "../assets/icons/resume.svg";
 import ContactIcon from "../assets/icons/contact.svg";
 import { isDesktop } from "react-device-detect";
+import "./Navbar.css";
 
 const navItems = [
   {
@@ -35,22 +36,7 @@ const navItems = [
 ];
 
 export default function Navbar() {
-  const [selectedIndex, setSelectedIndex] = useState<number | null>(0);
-  const [ballPosition, setBallPosition] = useState<number>(0);
   const iconRefs = useRef<(HTMLLIElement | null)[]>([]);
-  const navbarRect = document
-    .getElementById("navbar-sections")
-    ?.getBoundingClientRect();
-
-  const handleHover = (index: number) => {
-    setSelectedIndex(index);
-
-    if (iconRefs.current[index]) {
-      const rect = iconRefs.current[index].getBoundingClientRect();
-      const relativePosition = rect.left - navbarRect!.left;
-      setBallPosition(relativePosition);
-    }
-  };
 
   const handleIconClick = (e: React.MouseEvent, index: number) => {
     e.preventDefault();
@@ -65,7 +51,7 @@ export default function Navbar() {
 
   return (
     <div
-      className={`mx-auto my-4 p-1 bg-gray-600 border-transparent border-2 transition duration-200 rounded-full w-1/3 bg-opacity-30 hover:border-slate-200`}
+      className={`sticky top-2 ml-2 p-1 scale-50 bg-gray-600 border-transparent border-2 transition duration-200 rounded-full max-w-min bg-opacity-10 hover:border-slate-200 hover:bg-opacity-60 hover:scale-100 z-10 `}
     >
       <ul
         id='navbar-sections'
@@ -75,8 +61,7 @@ export default function Navbar() {
           return (
             <li
               key={item.name}
-              className='relative flex justify-center items-center w-10 h-10'
-              onMouseOver={() => handleHover(index)}
+              className='relative flex justify-center items-center w-16 h-16 perspective'
               ref={(el) => (iconRefs.current[index] = el)}
             >
               <a
@@ -84,37 +69,27 @@ export default function Navbar() {
                 onClick={(e) => handleIconClick(e, index)}
                 className='flex items-center justify-center w-full h-full'
               >
-                <img
-                  src={item.icon}
-                  className={`block ${
-                    isDesktop
-                      ? "w-8 h-8"
-                      : "w-10 h-10 bg-white bg-opacity-50 rounded-full p-1"
-                  }`}
-                  alt={item.name}
-                />
+                <div className='icon-container'>
+                  <div className='icon-front'>
+                    <img
+                      src={item.icon}
+                      className={`block ${
+                        isDesktop
+                          ? "w-8 h-8"
+                          : "w-10 h-10 bg-white bg-opacity-50 rounded-full p-1"
+                      }`}
+                      alt={item.name}
+                    />
+                  </div>
+                  <div className='icon-back'>
+                    <p className='text-sm rotate-180'>{item.name}</p>
+                  </div>
+                </div>
               </a>
             </li>
           );
         })}
-        <span
-          id='navbar-ball'
-          className={`rounded-full w-10 h-10 bg-white absolute translate-x-0 -z-10 left-auto ${
-            isDesktop ? "bg-opacity-50" : "bg-opacity-0"
-          }`}
-          style={{
-            left: ballPosition,
-            transition: "left 300ms cubic-bezier(.36,.61,.31,1.4)",
-          }}
-        ></span>
       </ul>
-      <div>
-        {selectedIndex !== null && (
-          <div className='text-white text-2xl w-full text-center font-thin tracking-widest'>
-            {navItems[selectedIndex].name}
-          </div>
-        )}
-      </div>
     </div>
   );
 }

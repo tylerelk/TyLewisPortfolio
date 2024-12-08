@@ -6,7 +6,7 @@ export default function Hero() {
     <>
       <div
         id='hero'
-        className='w-screen bg-hero-background h-screen flex items-center justify-center relative'
+        className='w-screen h-screen bg-hero-background flex items-center justify-center relative'
       >
         <Bestagon />
         <div
