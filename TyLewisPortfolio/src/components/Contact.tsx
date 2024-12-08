@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import linkedin from "../assets/icons/linkedin.svg";
 import github from "../assets/icons/tech/github.svg";
 import emailjs from "@emailjs/browser";
+import { isDesktop } from "react-device-detect";
 
 interface FormData {
   name: string;
@@ -97,7 +98,7 @@ const ContactForm = (): JSX.Element => {
       <p className='text-2xl'>or send me your details and I'll reach out:</p>
       <form
         onSubmit={handleSubmit}
-        className='rounded-lg bg-white border-2 p-4 w-3/4 m-auto flex flex-col gap-4 items-center my-4'
+        className={`rounded-lg bg-white border-2 m-auto flex flex-col gap-4 items-center my-4 ${isDesktop ? "w-3/4 p-4" : "w-full p-2"}`}
       >
         <label
           htmlFor='name'

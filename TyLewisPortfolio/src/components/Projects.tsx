@@ -1,3 +1,4 @@
+import { isDesktop, isMobile } from "react-device-detect";
 import projectData from "../assets/data/project-data.json";
 
 export default function Projects() {
@@ -13,11 +14,20 @@ export default function Projects() {
               {p.name}
             </h1>
             <div className='w-11/12 flex flex-wrap items-center gap-2 text-sm'>
-              <p className='text-left p-1 bg-yellow-500 m-1 rounded-md'>
-                Tech used:
-              </p>
+              {isDesktop && (
+                <p className='text-left p-1 bg-yellow-500 m-1 rounded-md '>
+                  Tech used:
+                </p>
+              )}
               {p.tags.map((t) => {
-                return <div key={t}>{t}</div>;
+                return (
+                  <div
+                    className={`${isMobile ? "italic mb-2 -mt-2" : ""}`}
+                    key={t}
+                  >
+                    {t}
+                  </div>
+                );
               })}
             </div>
             <div className='w-11/12 flex flex-wrap items-center gap-2 text-sm'>
@@ -41,7 +51,9 @@ export default function Projects() {
                 </a>
               </div>
             </div>
-            <div className='flex items-center justify-around'>
+            <div
+              className={`flex items-center justify-around ${isMobile ? "flex-col-reverse" : ""}`}
+            >
               <p className='first-letter:text-2xl'>{p.description}</p>
               <img
                 src={`/assets/images/${p.imageName}`}
