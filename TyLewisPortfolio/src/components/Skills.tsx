@@ -1,4 +1,4 @@
-import _resume from "../assets/copy/resume.json";
+import _resume from "../assets/data/resume.json";
 
 const Skills = () => {
   const skillEntries = _resume.sections.languages.items;

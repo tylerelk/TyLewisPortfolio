@@ -5,10 +5,11 @@ import Navbar from "./components/Navbar";
 import TechSection from "./components/TechSection";
 import Resume from "./components/Resume";
 import { isDesktop } from "react-device-detect";
-import _aboutMe from "./assets/copy/aboutme.json";
+import _aboutMe from "./assets/data/aboutme.json";
 import _booBoo from "./assets/images/booboo.jpeg";
 import Hero from "./components/Hero";
 import Contact from "./components/Contact";
+import Projects from "./components/Projects";
 
 function App() {
   const aboutMeParagraphs = _aboutMe.paragraphs;
@@ -43,7 +44,7 @@ function App() {
           <TechSection />
         </Card>
         <Card title='Projects' id='projects'>
-          <p>This section will contain highlights of projects I've built</p>
+          <Projects />
         </Card>
         <Card title='Resume' id='resume'>
           <Resume />
