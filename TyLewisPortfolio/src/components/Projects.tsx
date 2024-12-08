@@ -5,7 +5,10 @@ export default function Projects() {
     <div className='w-full h-full flex flex-col items-center gap-4'>
       {projectData.projects.map((p) => {
         return (
-          <div className='w-11/12 border-4 bg-white p-4 rounded-lg shadow-xl'>
+          <div
+            key={p.name}
+            className='w-11/12 border-4 bg-white p-4 rounded-lg shadow-xl'
+          >
             <h1 className='text-left text-3xl w-full border-b-2 border-teal-300 my-4'>
               {p.name}
             </h1>
@@ -14,7 +17,7 @@ export default function Projects() {
                 Tech used:
               </p>
               {p.tags.map((t) => {
-                return <div>{t}</div>;
+                return <div key={t}>{t}</div>;
               })}
             </div>
             <div className='w-11/12 flex flex-wrap items-center gap-2 text-sm'>

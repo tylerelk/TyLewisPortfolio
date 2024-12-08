@@ -24,6 +24,7 @@ const ContactForm = (): JSX.Element => {
     message: formData.message,
   };
   const [status, setStatus] = useState<string>("");
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -39,6 +40,7 @@ const ContactForm = (): JSX.Element => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsSubmitting(true);
     setStatus("Sending...");
     emailjs
       .send(
@@ -59,16 +61,17 @@ const ContactForm = (): JSX.Element => {
         }
       );
   };
+
   function renderSubmit() {
     switch (status) {
       case "Sending...":
-        return <span>&#9995;</span>;
+        return <span className='text-2xl'>📤</span>; // Mailbox icon
       case "Email sent successfully!":
-        return <span>&#9989;</span>;
+        return <span className='text-2xl'>👍</span>; // Checkmark icon
       case "Error sending email, please try again":
-        return <span>&#10060;</span>;
+        return <span className='text-2xl'>❌</span>; // Error icon
       default:
-        return <span>&#128235;</span>;
+        return <span className='text-2xl'>📧</span>; // Default icon (mailbox)
     }
   }
 
@@ -76,10 +79,18 @@ const ContactForm = (): JSX.Element => {
     <div>
       <p className='text-2xl'>Find me at one of these:</p>
       <div className='rounded-lg bg-white border-2 p-4 w-3/4 m-auto flex justify-center gap-4 items-center my-4'>
-        <a href='https://www.linkedin.com/in/ty-lewis/' target='_blank'>
+        <a
+          href='https://www.linkedin.com/in/ty-lewis/'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
           <img src={linkedin} alt='LinkedIn' />
         </a>
-        <a href='https://github.com/tylerelk' target='_blank'>
+        <a
+          href='https://github.com/tylerelk'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
           <img src={github} alt='GitHub' />
         </a>
       </div>
@@ -154,7 +165,8 @@ const ContactForm = (): JSX.Element => {
         />
         <button
           type='submit'
-          className='rounded-xl text-xl bg-teal-300 py-2 shadow-lg'
+          disabled={isSubmitting}
+          className={`w-3/4 py-2 text-xl rounded-xl bg-teal-300 shadow-lg flex items-center justify-center transition-transform duration-500 ${isSubmitting ? "animate-spin-3d" : ""}`}
         >
           {renderSubmit()}
         </button>
