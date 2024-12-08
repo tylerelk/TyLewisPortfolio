@@ -1,4 +1,4 @@
-import _resume from "../assets/copy/resume.json";
+import _resume from "../assets/data/resume.json";
 import ResumeSection from "./ResumeSection";
 import ResumeHeader from "./ResumeHeader";
 

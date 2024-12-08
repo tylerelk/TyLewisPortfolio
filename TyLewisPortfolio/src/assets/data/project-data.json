@@ -1,0 +1,26 @@
+{
+  "projects": [
+    {
+      "name": "inCharge",
+      "imageName": "inCharge.png",
+      "type": "Web App",
+      "tags": ["Blazor", "ASP.NET", "Azure", "C#", "CI/CD"],
+      "links": {
+        "repo": "",
+        "preview": ""
+      },
+      "description": "I made this project for my Capstone project for my degree. inCharge is a web app designed for operating room managers (like me) to have a quick-reference for all of their staff, operating rooms, and scheduled surgeries. Building inCharge was an excellent way for me to flex my C# skills and explore the .NET ecosystem."
+    },
+    {
+      "name": "Ty Lewis",
+      "imageName": "portfolioSite.png",
+      "type": "Portfolio Site",
+      "tags": ["React.js", "TypeScript", "Vite", "CI/CD"],
+      "links": {
+        "repo": "https://github.com/tylerelk/TyLewisPortfolio",
+        "preview": "https://tylewis.dev"
+      },
+      "description": "This is the page you're on right now! I spent a lot of time refreshing my knowledge of React and learning TypeScript. I've used this site as an opportunity to go wild with my creativity and build something that I think represents my personality and professional presence."
+    }
+  ]
+}
