@@ -1,0 +1,11 @@
+:root {
+  --yellow: #ffb84c;
+  --pink: #f266ab;
+  --teal: #2cd3e1;
+  --purple: #a459d1;
+  transition: --yellow 1s ease, --pink 1s ease, --purple 1s ease, --teal 1s ease;
+}
+
+* {
+  transition: background-color 1s ease, color 1s ease;
+}

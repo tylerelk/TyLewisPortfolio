@@ -1,9 +1,14 @@
 import _meAndChloe from "../assets/images/ty-and-chloe-line-art.svg";
+import Bestagon from "./Bestagon";
 
 export default function Hero() {
   return (
     <>
-      <div className='w-screen h-screen bg-hero-background flex items-center justify-center'>
+      <div
+        id='hero'
+        className='w-screen bg-hero-background h-screen flex items-center justify-center relative'
+      >
+        <Bestagon />
         <div
           className={`w-9/12 bg-gray-50 rounded-3xl shadow-2xl shadow-pink-300 p-4 flex justify-between items-center`}
         >

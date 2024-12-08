@@ -7,6 +7,7 @@ const Skills = () => {
     for (let i = 0; i < 5; i++) {
       bubbles.push(
         <span
+          key={i}
           className={`h-4 w-4 rounded-full border-gray-400 border-2 ${
             i < level ? "bg-yellow-300" : "bg-transparent"
           }`}
