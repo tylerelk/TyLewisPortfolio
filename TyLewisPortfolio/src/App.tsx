@@ -25,8 +25,8 @@ function App() {
             <img
               src={_booBoo}
               className={` ${
-                isDesktop ? "w-52" : "w-24"
-              } float-right mx-4 bg-inherit rounded-3xl transition duration-300 shadow-lg hover:shadow-2xl`}
+                isDesktop ? "w-52 float-right" : "w-40 mx-auto"
+              } mx-4 bg-inherit rounded-3xl transition duration-300 shadow-lg hover:shadow-2xl`}
             />
             {aboutMeParagraphs.map((p) => {
               return (
