@@ -8,6 +8,7 @@ import { isDesktop } from "react-device-detect";
 import _aboutMe from "./assets/copy/aboutme.json";
 import _booBoo from "./assets/images/booboo.jpeg";
 import Hero from "./components/Hero";
+import Contact from "./components/Contact";
 
 function App() {
   const aboutMeParagraphs = _aboutMe.paragraphs;
@@ -48,7 +49,7 @@ function App() {
           <Resume />
         </Card>
         <Card title='Contact' id='contact'>
-          <p>This section will contain contact information</p>
+          <Contact />
         </Card>
       </div>
     </>
