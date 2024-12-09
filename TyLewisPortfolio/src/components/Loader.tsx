@@ -1,6 +1,6 @@
 import { useState, useEffect, ReactNode } from "react";
 import "./Loader.css";
-import { isMobile } from "react-device-detect";
+import { isDesktop, isMobile } from "react-device-detect";
 
 interface LoaderProps {
   children: ReactNode;
@@ -20,7 +20,7 @@ const Loader: React.FC<LoaderProps> = ({ children }) => {
   return (
     <>
       <div>
-        {isLoading ? (
+        {isLoading && isDesktop ? (
           <div className='fixed w-full h-full bg-black flex justify-center items-center transition-all duration-200'>
             <h1
               className={`bg-gradient-to-b from-teal-300 to-yellow-500 text-transparent bg-clip-text ${isMobile ? "text-3xl" : "text-9xl"}`}
