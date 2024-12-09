@@ -10,9 +10,7 @@ const Loader: React.FC<LoaderProps> = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     const handleWindowLoad = () => {
-      setTimeout(() => {
-        setIsLoading(false);
-      }, 5000);
+      setIsLoading(false);
     };
     window.addEventListener("load", handleWindowLoad);
     return () => {
