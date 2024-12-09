@@ -6,7 +6,7 @@
       "type": "Web App",
       "tags": ["Blazor", "ASP.NET", "Azure", "C#", "CI/CD"],
       "links": {
-        "repo": "",
+        "repo": "https://github.com/tylerelk/inCharge",
         "preview": ""
       },
       "description": "I made this project for my Capstone project for my degree. inCharge is a web app designed for operating room managers (like me) to have a quick-reference for all of their staff, operating rooms, and scheduled surgeries. Building inCharge was an excellent way for me to flex my C# skills and explore the .NET ecosystem."
