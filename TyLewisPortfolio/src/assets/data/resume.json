@@ -212,7 +212,7 @@
           "visible": true,
           "name": "TypeScript",
           "description": "",
-          "level": 2
+          "level": 3
         },
         {
           "id": "bex069r8287owgk269xqovpi",
@@ -407,9 +407,7 @@
       "font": {
         "family": "IBM Plex Sans",
         "subset": "latin",
-        "variants": [
-          "regular"
-        ],
+        "variants": ["regular"],
         "size": 14.9
       },
       "lineHeight": 1.5,

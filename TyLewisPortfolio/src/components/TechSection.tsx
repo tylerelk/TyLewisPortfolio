@@ -22,7 +22,7 @@ export default function TechSection() {
             <div
               key={index}
               dangerouslySetInnerHTML={{ __html: icon.default }}
-              className={` flex justify-center items-center border-8 border-gray-100 rounded-3xl transition-all duration-200  ${isDesktop ? "iconSquare w-40 h-32 grayscale p-8" : "w-16 h-16"}`}
+              className={` flex justify-center items-center border-8 border-gray-100 rounded-full transition-all duration-200  ${isDesktop ? "iconSquare w-32 h-32 grayscale p-8 hover:bg-white hover:border-0" : "w-16 h-16"}`}
             ></div>
           );
         })}
