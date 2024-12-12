@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import linkedin from "../assets/icons/linkedin.svg";
-import github from "../assets/icons/tech/github.svg";
+import linkedin from "/assets/icons/linkedin.svg";
+import github from "/assets/icons/tech/github.svg";
 import emailjs from "@emailjs/browser";
 import { isDesktop } from "react-device-detect";
 
