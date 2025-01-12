@@ -7,9 +7,22 @@
     "location": "Stamford, CT",
     "url": {
       "label": "",
-      "href": ""
+      "href": "http://tylewis.dev"
     },
-    "customFields": [],
+    "customFields": [
+      {
+        "id": "po41j96ol4qk561e5holr96s",
+        "icon": "linkedin-logo",
+        "name": "/in/ty-lewis",
+        "value": "https://www.linkedin.com/in/ty-lewis/"
+      },
+      {
+        "id": "lnqa97tivfblwe2pij22udn6",
+        "icon": "github-logo",
+        "name": "tylerelk",
+        "value": "https://github.com/tylerelk"
+      }
+    ],
     "picture": {
       "url": "https://lh3.googleusercontent.com/a/ACg8ocI4dZtflU4zPVvgyyIoz8mFwKZ23yizkxyfuc9LbXuUqSKX3AjK=s96-c",
       "size": 64,
@@ -29,7 +42,7 @@
       "separateLinks": true,
       "visible": true,
       "id": "summary",
-      "content": "<p>Recent Software Engineering graduate with a background in healthcare, skilled in full-stack web and mobile application development across multiple languages and frameworks. Strong critical thinking and problem-solving abilities, with leadership experience in high-stress settings. Eager to apply technical expertise in an entry-level software engineering role.</p>"
+      "content": "I'm a Software Engineering graduate with hands-on experience in full-stack web and mobile application development. Proficient in multiple programming languages and frameworks, including Python, C#, and JavaScript, and experienced with technologies such as React, Azure, and.NET. Strong problem-solving skills, critical thinking, and leadership experience in fast-paced, high-pressure environments. Passionate about applying software development expertise in an entry-level engineering role, with a focus on full-stack development."
     },
     "awards": {
       "name": "Awards",
@@ -100,7 +113,7 @@
           "studyType": "Bachelor of Science",
           "area": "Nursing",
           "score": "",
-          "date": "2012-2015",
+          "date": "2015",
           "summary": "",
           "url": {
             "label": "",
@@ -123,7 +136,7 @@
           "position": "Assistant Nurse Manager",
           "location": "New York, NY",
           "date": "October 2024 - Present",
-          "summary": "<p>Managed staff pool of 15-20 FTEs in busy orthopedic surgery unit. Responsible for daily staffing, supply-chain, patient care, and sterile processing operations.</p>",
+          "summary": "<ul><li><p>Decreased turnover time by 25% in first 90 days</p></li><li><p>Managed daily staffing, supply-chain logistics, patient care, and sterile processing in a high-volume orthopedic surgery unit.</p></li><li><p>Led a team of 15-20 full-time employees, optimizing operational workflows under pressure.</p></li></ul>",
           "url": {
             "label": "",
             "href": ""
@@ -136,7 +149,7 @@
           "position": "Charge Nurse",
           "location": "Los Angeles, CA",
           "date": "July 2023 - September 2024",
-          "summary": "<p>Responsible for daily staffing and assignments of the main surgical unit in a busy community hospital. Reacted to scheduled and emergent requests from interdisciplinary team.</p>",
+          "summary": "<p></p><ul><li><p>Managed daily staffing and assignments for the surgical unit, responding to emergent requests.</p></li><li><p>Improved on-time surgical starts by over 50% in the first year.</p></li></ul>",
           "url": {
             "label": "",
             "href": ""
@@ -149,7 +162,7 @@
           "position": "Clinical Nurse Manager",
           "location": "New York, NY",
           "date": "February 2022 - June 2023",
-          "summary": "<p>Manager for transplant, robotic, and urological surgeries in NYCs most active transplant center. Managed 15 FTEs in scheduling, training, and organizational leadership.</p>",
+          "summary": "<ul><li><p>Managed transplant, robotic, and urological surgeries in one of NYC’s busiest transplant centers.</p></li><li><p>Oversaw the first robotic liver transplant in the U.S.</p></li><li><p>Led a team of 15 staff members in scheduling, training, and operations.</p></li></ul>",
           "url": {
             "label": "",
             "href": ""
@@ -162,7 +175,7 @@
           "position": "Nurse Clinician",
           "location": "New York, NY",
           "date": "May 2016 - February 2022",
-          "summary": "<p>Provided direct patient care in multiple settings including ICU and surgery.</p>",
+          "summary": "<ul><li><p>Provided direct patient care in the ICU and surgical settings.</p></li><li><p>Played a critical role in managing COVID-19 patients during the largest U.S. outbreak.</p></li><li><p>Contributed to a 100% on-time surgery start rate through operational improvements.</p></li></ul>",
           "url": {
             "label": "",
             "href": ""
@@ -187,8 +200,8 @@
       "items": []
     },
     "languages": {
-      "name": "Technology",
-      "columns": 2,
+      "name": "Languages & Technologyy",
+      "columns": 3,
       "separateLinks": true,
       "visible": true,
       "id": "languages",
@@ -203,16 +216,9 @@
         {
           "id": "sxiq4mk44zvrmwm7iakq62eu",
           "visible": true,
-          "name": "JavaScript",
+          "name": "JavaScript/Typescript",
           "description": "",
-          "level": 3
-        },
-        {
-          "id": "npz3h2j45f9lcsw6u1dy2vp8",
-          "visible": true,
-          "name": "TypeScript",
-          "description": "",
-          "level": 3
+          "level": 4
         },
         {
           "id": "bex069r8287owgk269xqovpi",
@@ -224,7 +230,7 @@
         {
           "id": "pkp8ikqq6aszgcsohhiri265",
           "visible": true,
-          "name": "SQL",
+          "name": "MySQL",
           "description": "",
           "level": 3
         },
@@ -241,13 +247,6 @@
           "name": "Azure",
           "description": "",
           "level": 3
-        },
-        {
-          "id": "xajefbemz33naooyqef86ny0",
-          "visible": true,
-          "name": "HTML/CSS",
-          "description": "",
-          "level": 4
         }
       ]
     },
@@ -257,36 +256,13 @@
       "separateLinks": true,
       "visible": true,
       "id": "profiles",
-      "items": [
-        {
-          "id": "ltjrpu7k033479673hatoj7y",
-          "visible": true,
-          "network": "LinkedIn",
-          "username": "ty-lewis",
-          "icon": "linkedin",
-          "url": {
-            "label": "",
-            "href": "https://www.linkedin.com/in/ty-lewis/"
-          }
-        },
-        {
-          "id": "j6fuyqq1cddpsiziki1swrvb",
-          "visible": true,
-          "network": "GitHub",
-          "username": "tylerelk",
-          "icon": "GitHub",
-          "url": {
-            "label": "",
-            "href": "https://github.com/tylerelk"
-          }
-        }
-      ]
+      "items": []
     },
     "projects": {
       "name": "Projects",
       "columns": 1,
       "separateLinks": true,
-      "visible": true,
+      "visible": false,
       "id": "projects",
       "items": [
         {
@@ -322,7 +298,7 @@
     },
     "skills": {
       "name": "Skills",
-      "columns": 2,
+      "columns": 3,
       "separateLinks": true,
       "visible": true,
       "id": "skills",
@@ -330,7 +306,7 @@
         {
           "id": "bg09tmedvqhx1cayfv9xf4i2",
           "visible": true,
-          "name": "Critical Thought",
+          "name": "Critical Thinking",
           "description": "",
           "level": 5,
           "keywords": []
@@ -352,9 +328,25 @@
           "keywords": []
         },
         {
-          "id": "r4cxpl6n7gvkow64clu9stjd",
+          "id": "yv9otmw54oxytp3v1ee3us9f",
           "visible": true,
-          "name": "Time Management",
+          "name": "Data Structures & Algorithms",
+          "description": "",
+          "level": 3,
+          "keywords": []
+        },
+        {
+          "id": "dr32f44goxb4787e6jzr8zkf",
+          "visible": true,
+          "name": "Problem Solving",
+          "description": "",
+          "level": 5,
+          "keywords": []
+        },
+        {
+          "id": "g5oe3nc96fytzsmpoo4qbres",
+          "visible": true,
+          "name": "Improvising",
           "description": "",
           "level": 5,
           "keywords": []
@@ -364,7 +356,7 @@
     "custom": {}
   },
   "metadata": {
-    "template": "gengar",
+    "template": "rhyhorn",
     "layout": [
       [
         [
@@ -391,7 +383,7 @@
       "visible": false
     },
     "page": {
-      "margin": 10,
+      "margin": 16,
       "format": "a4",
       "options": {
         "breakLine": true,
@@ -401,16 +393,18 @@
     "theme": {
       "background": "#ffffff",
       "text": "#000000",
-      "primary": "#475569"
+      "primary": "#2d8c00"
     },
     "typography": {
       "font": {
-        "family": "IBM Plex Sans",
+        "family": "Playfair Display",
         "subset": "latin",
-        "variants": ["regular"],
-        "size": 14.9
+        "variants": [
+          "regular"
+        ],
+        "size": 12
       },
-      "lineHeight": 1.5,
+      "lineHeight": 1.2,
       "hideIcons": false,
       "underlineLinks": false
     },
