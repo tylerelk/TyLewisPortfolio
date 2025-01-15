@@ -9,8 +9,8 @@ export default function TechSection() {
       <p className='text-xl text-left'>Here's what I'm good at</p>
       <Skills />
       <p className='text-xl text-left'>Here's what I've worked with</p>
-      <InView as={"div"}>
-        {({ inView, ref, entry }) => (
+      <InView as={"div"} triggerOnce={true}>
+        {({ inView, ref }) => (
           <div
             className={`m-auto flex flex-wrap justify-center gap-2 ${isDesktop ? "w-9/12" : "w-full"}`}
           >

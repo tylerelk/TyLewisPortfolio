@@ -13,7 +13,7 @@ const Card: React.FC<CardProps> = ({ children, title, id }) => {
   return (
     <>
       <InView as={"div"} rootMargin='-10%' triggerOnce={true}>
-        {({ inView, ref, entry }) => (
+        {({ inView, ref }) => (
           <div
             ref={ref}
             className={`card relative min-h-96 bg-gray-50 rounded-2xl m-auto shadow-2xl p-8 transition-opacity duration-500 ease-in  ${
