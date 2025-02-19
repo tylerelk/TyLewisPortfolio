@@ -1,6 +1,17 @@
 {
   "projects": [
     {
+      "name": "Janela",
+      "imageName": "Janela.png",
+      "type": "Web App",
+      "tags": ["Azure", "Blazor", "C#", "Javascript"],
+      "links": {
+        "repo": "https://github.com/tylerelk/Janela",
+        "preview": "https://janela.azurewebsites.net"
+      },
+      "description": "(Currently under construction) Janela is a simple weather app designed to simulate a more detailed view of looking out your window before leaving for the day. I spent a lot of time practicing Vanilla CSS and .NET backend programming. The app calls multiple APIs for weather, location, and background image data."
+    },
+    {
       "name": "inCharge",
       "imageName": "inCharge.png",
       "type": "Web App",

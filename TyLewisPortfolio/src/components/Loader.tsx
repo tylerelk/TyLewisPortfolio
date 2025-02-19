@@ -9,7 +9,10 @@ interface LoaderProps {
 
 const Loader: React.FC<LoaderProps> = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
+  const [isClient, setIsClient] = useState(false);
+
   useEffect(() => {
+    setIsClient(true);
     const handleWindowLoad = () => {
       setIsLoading(false);
     };
@@ -18,6 +21,11 @@ const Loader: React.FC<LoaderProps> = ({ children }) => {
       window.removeEventListener("load", handleWindowLoad);
     };
   });
+
+  if (!isClient) {
+    return <div>{children}</div>;
+  }
+
   return (
     <>
       <div>

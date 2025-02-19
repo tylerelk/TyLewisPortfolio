@@ -38,10 +38,14 @@ export default function Hero() {
             <ul
               className={`mt-5 text-2xl font-black font-mono text-right transform transition-all duration-1000 ease-in-out ${isShifted ? "opacity-100" : "opacity-0"}`}
             >
-              <span className='border-b-2'>a Software Engineer</span>
+              <span className='border-b-2 text-black'>a Software Engineer</span>
               {isDesktop &&
                 _bullets["hero-section"].map((b) => {
-                  return <li className='font-thin text-sm leading-6'>{b}</li>;
+                  return (
+                    <li className='font-thin text-sm leading-6 text-black'>
+                      {b}
+                    </li>
+                  );
                 })}
             </ul>
           </div>
