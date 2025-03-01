@@ -17,8 +17,12 @@ const Loader: React.FC<LoaderProps> = ({ children }) => {
       setIsLoading(false);
     };
     window.addEventListener("load", handleWindowLoad);
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 5000);
     return () => {
       window.removeEventListener("load", handleWindowLoad);
+      clearTimeout(timer);
     };
   });
 
