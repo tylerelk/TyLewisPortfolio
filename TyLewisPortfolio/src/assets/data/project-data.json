@@ -1,6 +1,17 @@
 {
   "projects": [
     {
+      "name": "Roll for Initiative",
+      "imageName": "RollForInit.jpeg",
+      "type": "Mobile App",
+      "tags": ["React Native", "TypeScript", "Expo"],
+      "links": {
+        "repo": "https://github.com/tylerelk/RollForInitiative",
+        "preview": "https://youtu.be/YENi3oo3QQo"
+      },
+      "description": "Roll for Initiative is a utility app for D&D Dungeon Masters to create, manage, and display turn order during combat encounters. The app features party and encounter creation, combat and status management, and stores all data locally to streamline functionality."
+    },
+    {
       "name": "Janela",
       "imageName": "Janela.png",
       "type": "Web App",
@@ -9,7 +20,7 @@
         "repo": "https://github.com/tylerelk/Janela",
         "preview": "https://janela.azurewebsites.net"
       },
-      "description": "(Currently under construction) Janela is a simple weather app designed to simulate a more detailed view of looking out your window before leaving for the day. I spent a lot of time practicing Vanilla CSS and .NET backend programming. The app calls multiple APIs for weather, location, and background image data."
+      "description": "(Mobile version under construction) Janela is a simple weather app designed to simulate a more detailed view of looking out your window before leaving for the day. I spent a lot of time practicing Vanilla CSS and .NET backend programming. The app calls multiple APIs for weather, location, and background image data."
     },
     {
       "name": "inCharge",
@@ -21,17 +32,6 @@
         "preview": ""
       },
       "description": "I made this project for my Capstone project for my degree. inCharge is a web app designed for operating room managers (like me) to have a quick-reference for all of their staff, operating rooms, and scheduled surgeries. Building inCharge was an excellent way for me to flex my C# skills and explore the .NET ecosystem."
-    },
-    {
-      "name": "Ty Lewis",
-      "imageName": "portfolioSite.png",
-      "type": "Portfolio Site",
-      "tags": ["React.js", "TypeScript", "Vite", "CI/CD"],
-      "links": {
-        "repo": "https://github.com/tylerelk/TyLewisPortfolio",
-        "preview": "https://tylewis.dev"
-      },
-      "description": "This is the page you're on right now! I spent a lot of time refreshing my knowledge of React and learning TypeScript. I've used this site as an opportunity to go wild with my creativity and build something that I think represents my personality and professional presence."
     }
   ]
 }

@@ -35,7 +35,7 @@ export default function Projects() {
                 Links:
               </p>
               <div className='flex gap-2 justify-around items-center'>
-                {p.links.preview.length > 1 && (
+                {
                   <a
                     href={p.links.preview}
                     className='rounded-md p-1 bg-black text-white m-1 hover:text-teal-300'
@@ -43,7 +43,7 @@ export default function Projects() {
                   >
                     Preview
                   </a>
-                )}
+                }
                 <a
                   href={p.links.repo}
                   className='rounded-md p-1 bg-black text-white m-1 hover:text-teal-300'
